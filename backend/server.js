@@ -9,7 +9,8 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(cors());
 
-const LOCAL_MONGO_URI = "mongodb://127.0.0.1:27017/mini_social_db";
+const LOCAL_MONGO_URI =
+  "mongodb+srv://<db_username>:<db_password>@cluster1.xaiwozs.mongodb.net/?appName=Cluster1";
 mongoose
   .connect(LOCAL_MONGO_URI)
   .then(() => console.log("MongoDB locally connected..."))
